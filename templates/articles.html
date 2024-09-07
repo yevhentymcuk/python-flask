@@ -1,8 +1,18 @@
 {% extends "layout.html" %}
 
 {% block content %}
+    <section class="logo_articles">
+        <h1>Discover <br> something nev</h1>
+    </section>
 
-    <h1>cvnmc222222222222</h1>
+    <section>
+        <h2>Open new City</h2>
 
+        {% for article in articles %}
+            <h3>
+                <a class="" href="/details">{{ article }}</a>
+            </h3>
+        {% endfor %}
+    </section>
 
 {% endblock content %}

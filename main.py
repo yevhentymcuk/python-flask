@@ -20,7 +20,10 @@ def about():
 
 @app.route('/articles')
 def articles():
-    return render_template('articles.html')
+    new_articles = ['How to avoid expensive travel mistakes', 'Top 5 places to experience supernatural forces',
+                    'Three wonderfully bizarre Mexican festivals', 'The 20 greenest destinations on Earth',
+                    'How to survive on a desert island']
+    return render_template('articles.html', articles=new_articles)
 
 
 @app.route('/details')
@@ -28,6 +31,6 @@ def details():
     return render_template('details.html')
 
 
-# Лише для локального сервера
+# Лише для локаотного сервера (закоментувати)
 if __name__ == '__main__':
     app.run(debug=True)
